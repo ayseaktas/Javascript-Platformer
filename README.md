@@ -7,6 +7,6 @@ Anyone can just download and play it through browser(chrome recomended) and have
 
 Here is some of images from interface;
 
-![main Menu]("user-interface/main_menu.png")
-![Ep 1]("user-interface/ep1.png")
-![Ep 2]("user-interface/ep2.png")
+![main Menu](<user-interface/main_menu.png>)
+![Ep 1](<user-interface/ep1.png>)
+![Ep 2](<user-interface/ep2.png>)
