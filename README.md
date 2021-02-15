@@ -6,3 +6,7 @@ This game is made on HTML Canvas and used VanillaJS, HTML, CSS. This was my scho
 Anyone can just download and play it through browser(chrome recomended) and have benefit from source code.
 
 Here is some of images from interface;
+
+![main Menu]("user-interface/main_menu.png")
+![Ep 1]("user-interface/ep1.png")
+![Ep 2]("user-interface/ep2.png")
