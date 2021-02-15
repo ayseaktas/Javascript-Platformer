@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Platformar Game</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> -->
+
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/levels/level01.js"></script>
+        <script type="text/javascript" src="js/levels/level02.js"></script>
+        <script type="text/javascript" src="js/levels/level03.js"></script>
+        <script type="text/javascript" src="js/levels/level04.js"></script>
+        <script type="text/javascript" src="js/levels/level05.js"></script>
+        <script type="text/javascript" src="js/levels/level06.js"></script>
+        <script type="text/javascript" src="js/levels/level07.js"></script>
+        <script type="text/javascript" src="js/spriteSheets/playerSpriteSheet.js"></script>
+        <script type="text/javascript" src="js/spriteSheets/enemySpriteSheet.js"></script>
+        <script type="text/javascript" src="js/spriteSheets/entitiesSpriteSheet.js"></script>
+        <script type="text/javascript" src="js/spriteSheets/fxSpriteSheet.js"></script>
+        <script type="text/javascript" src="js/spriteSheets/environmentSpriteSheet.js"></script>
+
+    </head>
+    <body>
+        
+        <div id="container">
+            <canvas width="1024" height="576">
+                <p>You're browser does not support the required functionality to play this game.</p>
+                <p>Please update to a modern browser such as <a href="www.google.com/chrome/‎">Google Chrome</a> to play.</p>
+            </canvas>
+    
+            <div class="menuInResume">
+                <div class="menuContent">
+                    <div class="buttonDiv" >
+                        <button id="resume" >RESUME</button>
+                        <button id="exit2" >MAIN MENU</button>
+                        <button id="settings2" >SETTINGS</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menuInRestart">
+                <div class="menuContent">
+                    <div class="buttonDiv" >
+                        <button id="restart" >RESTART</button>
+                        <button id="exit1" >MAIN MENU</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="winState">
+                <div class="menuContent">
+                    <div class="buttonDiv">
+                        <h1 style="padding-top: 40%; color: black;">~ SON ~</h1>
+                        <button id="exit3" >MAIN MENU</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mainMenu">
+                <div class="menuContent">
+                    <div class="buttonDiv" >
+                        <button id="newGame" >NEW GAME</button>
+                        <button id="continue" >CONTINUE</button>
+                        <p id="save" style="color: black; margin-top: 5px; display: none;">NO RECORD</p>
+                        <button id="settings" >SETTINGS</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings">
+                <div class="menuContent">
+                    <div class="buttonDiv" >
+                        <div class="sliders">
+
+                            <div class="slidecontainer">
+                              <label class="settingsFont">music</label>
+                              <input type="range" min="0" max="100" value="75" class="slider" id="music_range">
+                            </div>
+                  
+                            <div class="slidecontainer">
+                              <label class="settingsFont">sound</label>
+                              <input type="range" min="0" max="100" value="100" class="slider" id="sound_range">
+                            </div>
+
+                            <div class="checkBox">
+                              <label class="settingsFont" >test mode: </label>
+                              <input type="checkbox" id="switch" class="switch">
+                            </div>
+                
+                        </div>
+                        <button id="keys">KEYS</button>
+                        <button id="back">BACK</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="keyboard">
+                <div class="menuContent">
+                    <div class="buttonDiv" >
+                        <p style="color: black; padding-top: 100px;">movement: arrow keys or w,a,s,d</p><br>
+                        <p style="color: black; padding-top: 20px;">pause: esc</p><br;>
+                        <p style="color: black; padding-top: 20px;">aim and shoot: mouse(left)</p><br>
+                        <button id="back3" >BACK</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="placeHolder" class="">
+                <div class="cutScene">
+                    <div class="menuContent">
+                    </div>
+                </div>
+            </div>  
+
+            <div class="" id="story1" style="display: none;">
+                <div class="menuContent">
+                    <img src="img/storySheets/level1Sheet.png" style="height: 100%;">
+                    <p>press ENTER to continue</p>
+                </div>
+            </div>
+            
+            <div class="" id="story2" style="display: none;">
+                <div class="menuContent">
+                    <img src="img/storySheets/level2Sheet.png" style="height: 100%;">
+                    <p>press ENTER to continue</p>
+                </div>
+            </div>
+
+            <div class="" id="story3" style="display: none;">
+                <div class="menuContent">
+                    <img src="img/storySheets/level3Sheet.png" style="height: 100%;">
+                    <p>press ENTER to continue</p>
+                </div>
+            </div>
+
+            <div class="" id="story4" style="display: none;">
+                <div class="menuContent">
+                    <img src="img/storySheets/level4Sheet.png" style="height: 100%;">
+                    <p>press ENTER to continue</p>
+                </div>
+            </div>
+
+            <div class="" id="story5" style="display: none;">
+                <div class="menuContent">
+                    <img src="img/storySheets/level5Sheet.png" style="height: 100%;">
+                    <p>press ENTER to continue</p>
+                </div>
+            </div>
+
+            <div class="" id="story6" style="display: none;">
+                <div class="menuContent">
+                    <img src="img/storySheets/level6Sheet.png" style="height: 100%;">
+                    <p>press ENTER to continue</p>
+                </div>
+            </div>
+
+            <div class="" id="story7" style="display: none;">
+                <div class="menuContent">
+                    <img src="img/storySheets/level7Sheet.png" style="height: 100%;">
+                    <p>press ENTER to continue</p>
+                </div>
+            </div>
+
+            <div class="" id="story8" style="display: none;">
+                <div class="menuContent">
+                    <img src="img/storySheets/level8Sheet.png" style="height: 100%;">
+                    <p>press ENTER to continue</p>
+                </div>
+            </div>
+
+            <!-- player -->
+            <audio id="arrow_in" src="audio/player/arrow_in.mp3"></audio>
+            <audio id="arrow_out" src="audio/player/arrow_out.mp3"></audio>
+            <audio id="hit" src="audio/player/hit.mp3"></audio>
+            <audio id="onTheGround" src="audio/player/hitTheGround.mp3"></audio>
+            <audio id="lose" src="audio/player/lose.mp3"></audio>
+            <audio id="powerUp" src="audio/player/powerUp.mp3"></audio>
+            <!-- menu -->
+            <audio id="button" src="audio/menu/button.mp3"></audio>
+            <!-- littleEnemy -->
+            <audio id="littleEnemyHit" src="audio/littleEnemy/hit.mp3"></audio>
+            <audio id="littleEnemyDead" src="audio/littleEnemy/dead.mp3"></audio>
+            <!-- coin -->
+            <audio id="collect" src="audio/coin/collect.mp3"></audio>
+            <!-- portal -->
+            <audio id="portalOpening" src="audio/portal/open.mp3"></audio>
+            <audio id="portalClosing" src="audio/portal/close.mp3"></audio>
+            <audio id="portalSound" src="audio/portal/portalSound.mp3"></audio>
+            <!-- boss -->
+            <audio id="wing" src="audio/boss/wing.mp3"></audio>
+            <audio id="attack" src="audio/boss/attack.mp3"></audio>
+            <audio id="bossTeleportSound" src="audio/boss/teleport.mp3"></audio>
+            <audio id="bossPortalSound" src="audio/boss/portalSound.mp3"></audio>
+            <audio id="bossOnFire" src="audio/boss/bossOnFire.mp3"></audio>
+            <!-- music -->
+            <audio id="lightSide" src="audio/music/lightSide.mp3"></audio>
+            <audio id="darkSide" src="audio/music/darkSide.mp3"></audio>
+            <audio id="bossFight" src="audio/music/bossFight.mp3"></audio>
+            
+
+        </div>
+
+    </body>
+</html>
