@@ -1,0 +1,309 @@
+* {
+
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+	font-family: gameFont, cursive;
+  
+}
+@font-face{
+  font-family: gameFont;
+  src : url(font/PressStart2P-Regular.ttf);
+}
+html {
+  height:100%;
+  width:100%;
+}
+body {
+  margin:0;
+  padding:0;
+  align-content:space-around;
+  background-color:#202830;
+  color:#ffffff;
+  display:grid;
+  grid-template-columns:auto;
+  grid-template-rows:auto auto;
+  justify-items:center;
+  min-height:100%;
+  width:100%;
+}
+#container {
+  width: 1024;
+  height: 576;
+  position: relative;
+}
+canvas{
+  border:1px solid #000000;
+  cursor: crosshair;
+  width: 100%;
+  height: 100%;
+}
+
+.menuContent{
+  background-color: rgb(0, 0, 0, 38%);
+  height: 100%;
+	width: 100%;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+}
+.menuInResume{
+  top: 0; left: 0; bottom: 0; right: 0;
+  position: absolute;
+  width: 100%;
+  display: none; 
+}
+.menuInRestart{
+  top: 0; left: 0; bottom: 0; right: 0;
+  position: absolute;
+  width: 100%;
+  display: none;
+}
+.winState{
+  top: 0; left: 0; bottom: 0; right: 0;
+  background-image: url(gui/interfaceImage.png);
+  position: absolute;
+  width: 100%;
+  display: none;
+  background-size: cover;
+}
+.mainMenu{
+  top: 0; left: 0; bottom: 0; right: 0;
+  background-image: url(gui/interfaceImage2.png);
+  position: absolute;
+  width: 100%;
+  display: block;
+  background-size: cover;
+}
+.keyboard{
+  top: 0; left: 0; bottom: 0; right: 0;
+  background-image: url(gui/interfaceImage2.png);
+  position: absolute;
+  width: 100%;
+  display: none;
+  background-size: cover;
+}
+
+.settings{
+  top: 0; left: 0; bottom: 0; right: 0;
+  background-image: url(gui/interfaceImage2.png);
+  position: absolute;
+  width: 100%;
+  display: none;
+  background-size: cover;
+}
+.cutScene{
+  top: 0; left: 0; bottom: 0; right: 0;
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  display: none;
+}
+#story1, #story2, #story3, #story4, #story5, #story6, #story7, #story8{
+  top: 0; left: 0; bottom: 0; right: 0;
+  position: absolute;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: var(--light);
+  width: 300px;
+  height: 70px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  background-size: 100% 100%;
+  box-shadow: 0 0 0 7px var(--light) inset;
+  margin-top: 70px;
+}
+button:hover {
+  background-image: linear-gradient(
+    145deg,
+    transparent 10%,
+    var(--dark) 10% 20%,
+    transparent 20% 30%,
+    var(--dark) 30% 40%,
+    transparent 40% 50%,
+    var(--dark) 50% 60%,
+    transparent 60% 70%,
+    var(--dark) 70% 80%,
+    transparent 80% 90%,
+    var(--dark) 90% 100%
+  );
+  animation: background 3s linear infinite;
+}
+@keyframes background {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+:root {
+  --background: #E5FFB3;
+  --background-accent: #DBF8A3;
+  --background-accent-2: #BDE66E;
+  --light: #92DE34;
+  --dark: #69BC22;
+  --text: #025600;
+}
+.buttonDiv{
+    background-color: var(--background);
+    background-image: linear-gradient(
+      var(--background-accent-2) 50%,
+      var(--background-accent) 50%
+    ), linear-gradient(
+      var(--background-accent) 50%,
+      var(--background-accent-2) 50%
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 30px;
+    background-position: top left, bottom left;
+    width: 40%; 
+    height: 100%;
+    margin-left: 30%;
+    border-radius: 40px;
+}
+
+
+
+.fade-in {
+  animation: fadeIn ease 4s;
+  -webkit-animation: fadeIn ease 4s;
+  -moz-animation: fadeIn ease 4s;
+  -o-animation: fadeIn ease 4s;
+  -ms-animation: fadeIn ease 4s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.sliders{
+  padding: inherit;
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+.slidecontainer {
+  margin-top: 50px;
+  width: 100%;
+}
+label.settingsFont{
+  float: left;
+  margin-bottom: 10px;
+  color: #025600;
+  font-size: larger;
+}
+.checkBox{
+  margin-top: 50px;
+}
+#keys{
+  margin-top: 100%;
+}
+#keys, #back{
+  width: 40%;
+
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #BDE66E;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin-bottom: 10px;
+}
+.slider:hover {
+  opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #025600;
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #025600;
+  cursor: pointer;
+}
+
+progress {
+  width: 15%;
+  display: block;
+  padding: 3px;
+  border: 0 none;
+  background: #444;
+  border-radius: 14px;
+}
+progress::-webkit-progress-bar {
+    background: transparent;
+}  
+progress[value]::-webkit-progress-value {
+  background-image:
+	   -webkit-linear-gradient(-45deg, 
+	                           transparent 33%, rgba(0, 0, 0, .1) 33%, 
+	                           rgba(0,0, 0, .1) 66%, transparent 66%),
+	   -webkit-linear-gradient(top, 
+	                           rgba(255, 255, 255, .25), 
+	                           rgba(0, 0, 0, .25)),
+	   -webkit-linear-gradient(left, #f44, rgb(0, 204, 68));
+
+    border-radius: 12px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
